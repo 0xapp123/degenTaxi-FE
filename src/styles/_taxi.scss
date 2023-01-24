@@ -1,0 +1,114 @@
+.car {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 48px;
+    z-index: 10;
+    .taxi-light {
+        height: 17px;
+        position: absolute;
+        left: 63px;
+        top: -16px;
+        z-index: 3;
+    }
+    .taxi {
+        width: 170px;
+        position: relative;
+        z-index: 3;
+    }
+    .wheel-r {
+        position: absolute;
+        left: 28px;
+        bottom: 8px;
+        height: 28px;
+        width: 24px;
+        z-index: 4;
+    }
+    .wheel-l {
+        position: absolute;
+        left: 84px;
+        bottom: 8px;
+        height: 28px;
+        width: 24px;
+        z-index: 4;
+    }
+    .wheel-c {
+        position: absolute;
+        left: 140px;
+        bottom: 8px;
+        height: 28px;
+        width: 24px;
+        z-index: 2;
+    }
+    .taxi-fever {
+        position: absolute;
+        bottom: 22px;
+        z-index: 2;
+        width: 34px;
+        left: -13px;
+    }
+}
+img.street-pattern {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 240px;
+    z-index: 2;
+}
+.street {
+    height: 240px;
+    width: 1000000px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: contain;
+    z-index: 4;
+}
+.dark-sky {
+    width: 1000000px;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.dark-sky-animate {
+    animation: street 80000s infinite;
+}
+.street-animate {
+    animation: street 1000s infinite;
+}
+.wheel-spin {
+    animation: wheel-spin 1500s infinite;
+}
+
+@keyframes street {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes wheel-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(3600000deg);
+    }
+}
+
+// cubic-bezier(0.81, 0.09, 1, 0.5)
+
+.car-move {
+    animation: car-move 1s;
+}
+
+@keyframes car-move {
+    0% {
+        margin-left: -500px;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
